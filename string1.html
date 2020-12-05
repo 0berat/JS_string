@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var metin = "Bu ders stiringlerlee ilgilidir gene burada gene gene var ders yazıcam ki .";
+   document.write(metin);
+   // Karakter uzunluğu.
+
+    document.write(metin.length);
+
+
+    //Her hangi bir stiring ifadesini bulmak için(karakter bakımından kaçıncı sırada olduğunu göterir.
+
+    var pos = metin.indexOf("ders");
+
+//O stiringin en son karşılaşılan yeri
+//     alert(pos);
+
+var pos = metin.lastIndexOf("ders");
+// alert(pos);
+//İndexofla aynı amaç regularexprance?? nedir
+    //.search etketi ise string aramalya yarar.
+    var pos = metin.search("gene");
+    //Belirtilen aralıları gösterır sadece ikiside aynı işlevi görüyor.
+    var text =metin.slice(5,10);
+    var text2=metin.substring(5,10); //negatif değerler çalışmaz
+    //- konulduysa eğer metnin sonundan başlar ve yazılan değer kadar ifade gösterir. + lı ifadesi işe yaramadı.
+    var text1 =metin.slice(-15);
+    // Bi noktadan başlar ve belirttiğiniz sayı kadar karakter gösterir.
+var text3 =metin.substr(5,10);
+
+    // alert(text);
+    // alert(text2);
+    // alert(text1);
+    // alert(text3);
+
+
+    //Metin değiştirme
+      // var newText =   metin.replace("gene","değiştirildi");
+       var newText =   metin.replace(/gene/g,"değiştirildi");
+    //alert(newText);
+    //Karakter işlemleri -BÜTÜN KARAKTERLERİ BÜYÜLTMEK
+    var upper =metin.toUpperCase();
+    // alert(upper);
+    //-bütün karakterleri küçültmek
+    var lower =metin.toLowerCase();
+    // alert(lower);
+
+    //Metin birleştirme
+        // var text5 = "berat "+""+"Mustafa";
+        // alert(text5);
+var fname = "berat..";
+var lname = "yergin";
+var fullname =fname.concat("",lname);
+// alert(fullname);
+//Char  istediğimiz karakteri alabiliriz.
+    var char =metin.charAt(0);
+    alert(char);
+    //split
+    var splittext = "gökhan;Berat;defne;handan";
+    var list= splittext.split(";");
+    console.log(list);
+
+
+</script>
+
+</body>
+</html>
